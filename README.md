@@ -164,5 +164,4 @@ API calls through a small backend proxy that holds the keys server-side.
 
 ## 📄 License
 
-Created as an academic final-year project. Free to use and modify for
-educational purposes.
+Feel free to Use
