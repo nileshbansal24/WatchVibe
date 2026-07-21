@@ -1,0 +1,615 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 410px;
+    min-height: 520px;
+
+    font-family: Arial, sans-serif;
+
+    background: #101010;
+    color: white;
+}
+
+
+.container {
+    padding: 20px;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+
+h1 {
+    margin: 0 0 5px 0;
+    font-size: 25px;
+}
+
+
+.subtitle {
+    margin: 0;
+
+    color: #a9a9a9;
+
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+.clear-button {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid #333;
+    border-radius: 50%;
+
+    background: #1c1c1c;
+    color: #aaa;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+
+.clear-button:hover {
+    color: white;
+    border-color: #666;
+}
+
+
+/* NAVIGATION */
+
+.nav-tabs {
+    display: flex;
+
+    margin-bottom: 15px;
+    padding: 4px;
+
+    border-radius: 11px;
+
+    background: #181818;
+}
+
+
+.nav-tab {
+    flex: 1;
+
+    padding: 9px 6px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #777;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.nav-tab.active {
+    background: #292929;
+    color: white;
+}
+
+
+/* INPUT */
+
+textarea {
+    width: 100%;
+    height: 115px;
+
+    padding: 13px;
+
+    resize: none;
+
+    border: 1px solid #333;
+    border-radius: 12px;
+
+    background: #1c1c1c;
+    color: white;
+
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+textarea::placeholder {
+    color: #777;
+}
+
+
+textarea:focus {
+    outline: none;
+    border-color: #e50914;
+}
+
+
+/* RECOMMEND BUTTON */
+
+#recommendButton {
+    width: 100%;
+
+    margin-top: 13px;
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #e50914;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+#recommendButton:hover {
+    opacity: 0.9;
+}
+
+
+#recommendButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+.memory-status {
+    margin: 10px 0 0 0;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* RESULTS */
+
+#results {
+    margin-top: 18px;
+}
+
+
+.results-heading {
+    margin-bottom: 12px;
+
+    font-size: 15px;
+    color: #ddd;
+}
+
+
+/* MOVIE CARD */
+
+.movie-card {
+    margin-bottom: 13px;
+    padding: 15px;
+
+    border: 1px solid #292929;
+    border-radius: 13px;
+
+    background: #191919;
+}
+
+
+.movie-content {
+    display: flex;
+
+    gap: 13px;
+
+    align-items: flex-start;
+}
+
+
+.movie-poster {
+    width: 90px;
+    height: 135px;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+    display: block;
+}
+
+
+.poster-link {
+    flex-shrink: 0;
+}
+
+
+.poster-placeholder {
+    width: 90px;
+    height: 135px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #262626;
+
+    font-size: 30px;
+}
+
+
+.movie-info {
+    flex: 1;
+    min-width: 0;
+}
+
+
+.movie-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+
+.movie-title {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+
+.movie-year {
+    color: #888;
+
+    font-weight: normal;
+}
+
+
+.movie-link {
+    color: white;
+
+    text-decoration: none;
+}
+
+
+.movie-link:hover {
+    color: #ff4d56;
+
+    text-decoration: underline;
+}
+
+
+.vibe-match {
+    flex-shrink: 0;
+
+    padding: 5px 8px;
+
+    border-radius: 20px;
+
+    background: rgba(229, 9, 20, 0.15);
+    color: #ff4d56;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+.movie-meta {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 8px;
+
+    color: #aaa;
+
+    font-size: 11px;
+}
+
+
+.movie-genre {
+    margin: 7px 0 0 0;
+
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+.movie-reason {
+    margin: 10px 0 0 0;
+
+    color: #b5b5b5;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+.imdb-button {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: #f5c518;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.imdb-button:hover {
+    text-decoration: underline;
+}
+
+
+/* FEEDBACK BUTTONS */
+
+.feedback-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 12px;
+}
+
+
+.feedback-button {
+    padding: 6px 8px;
+
+    border: 1px solid #333;
+    border-radius: 20px;
+
+    background: #222;
+    color: #aaa;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.feedback-button:hover {
+    border-color: #666;
+
+    color: white;
+}
+
+
+.feedback-button.active {
+    border-color: #e50914;
+
+    background: rgba(229, 9, 20, 0.18);
+
+    color: #ff626b;
+}
+
+
+/* HISTORY */
+
+.history-header h2 {
+    margin: 0 0 4px 0;
+
+    font-size: 18px;
+}
+
+
+.history-header p {
+    margin: 0 0 16px 0;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+.history-card {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 11px;
+    padding: 11px;
+
+    border: 1px solid #292929;
+    border-radius: 11px;
+
+    background: #191919;
+}
+
+
+.history-poster {
+    width: 55px;
+    height: 82px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+}
+
+
+.history-poster-placeholder {
+    width: 55px;
+    height: 82px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #262626;
+
+    font-size: 22px;
+}
+
+
+.history-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.history-movie-title {
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+
+.history-meta {
+    margin-top: 5px;
+
+    color: #999;
+
+    font-size: 11px;
+}
+
+
+.history-query {
+    margin-top: 7px;
+
+    color: #777;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+.history-feedback {
+    display: inline-block;
+
+    margin-top: 7px;
+    padding: 4px 7px;
+
+    border-radius: 20px;
+
+    background: #242424;
+    color: #bbb;
+
+    font-size: 10px;
+}
+
+
+.empty-history {
+    padding: 30px 15px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* MESSAGES */
+
+.error-message {
+    padding: 13px;
+
+    border: 1px solid #4a2222;
+    border-radius: 10px;
+
+    background: #251414;
+    color: #ff8b8b;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+.loading {
+    text-align: center;
+
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+/* --------------------------------------------------
+   SETTINGS VIEW (added in React v5)
+   -------------------------------------------------- */
+
+.settings-view {
+    padding-top: 4px;
+}
+
+
+.settings-label {
+    display: block;
+
+    margin: 14px 0 6px 0;
+
+    color: #ccc;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.settings-input {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border: 1px solid #333;
+    border-radius: 10px;
+
+    background: #1c1c1c;
+    color: white;
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+
+.settings-input:focus {
+    outline: none;
+    border-color: #e50914;
+}
+
+
+.settings-input::placeholder {
+    color: #777;
+}
